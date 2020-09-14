@@ -1,0 +1,30 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: ''
+  description: ''
+paths:
+  /users:
+    get:
+      description: Returns all users
+      responses:
+        200:
+          description: Successfully returned all users
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+        
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /ceelogre1/phantom/1.0
+schemes:
+ - https
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+    description: Users object
