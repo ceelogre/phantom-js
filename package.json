@@ -4,8 +4,23 @@
   "description": "js, transport, buses, mobility",
   "main": "src/index.js",
   "scripts": {
+    "start": "node ./dist/",
     "dev": "nodemon --exec babel-node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir dist",
+    "test": "nyc mocha"
+  },
+  "mocha": {
+    "spec": "src/test/**.mjs"
+  },
+  "nyc": {
+    "reporter": [
+      "text-summary",
+      "lcov"
+    ],
+    "all": "true",
+    "exclude": [
+      "coverage"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,10 +39,13 @@
   },
   "homepage": "https://github.com/ceelogre/phantom-js#readme",
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
-    "eslint": "^7.9.0"
+    "eslint": "^7.9.0",
+    "mocha": "^8.1.3",
+    "nyc": "^15.1.0"
   },
   "dependencies": {
     "express": "^4.17.1"
