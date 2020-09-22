@@ -1,22 +1,21 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import bodyParser from 'body-parser'
+import './connection'
+import userRouter from './routes/user'
 
 dotenv.config()
+
 const app = express()
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    res.json({
-        message: 'App configured properly.'
-    })
+  res.json({
+    message: 'App configured properly.'
+  })
 })
+app.use('/users', userRouter)
 
-const userIds = [{
-    id: 30
-}]
-app.get('/users', (req, res) => {
-    res.json({
-        userIds
-    })
-})
-console.info(process.env.PORT)
-app.listen(process.env.PORT, () => console.info(`Running on port ${process.env.PORT}`))
+let PORT = process.env.PORT
+
+app.listen(PORT, () => console.info(`Running on port ${PORT}`))

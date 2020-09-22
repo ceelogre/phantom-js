@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "alien",
+    "password": null,
+    "database": "phantom_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "alien",
+    "password": null,
+    "database": "phantom_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "alien",
+    "password": null,
+    "database": "phantom_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
