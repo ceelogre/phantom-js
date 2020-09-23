@@ -18,6 +18,5 @@ app.get('/users', (req, res) => {
         userIds
     })
 })
-let PORT = process.env.PORT || 3000
-
-app.listen(PORT, () => console.info(`Running on port ${process.env.PORT}`))
+console.info(process.env.PORT)
+app.listen(process.env.PORT, () => console.info(`Running on port ${process.env.PORT}`))
