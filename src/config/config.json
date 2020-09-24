@@ -12,12 +12,5 @@
     "database": "phantom_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
-  },
-  "production": {
-    "username": "alien",
-    "password": null,
-    "database": "phantom_production",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
   }
 }
