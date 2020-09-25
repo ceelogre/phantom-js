@@ -10,9 +10,11 @@ import userRouter from './routes/user'
 
 const i18n = new I18n({
   locales: ['en', 'rw', 'fr'],
-  directory: path.join(__dirname, 'locales')
+  directory: path.join(__dirname, '..', 'locales/')
 })
 
+console.log( path.join(__dirname, 'locales') )
+console.log( path.join(__dirname, '..', 'locales') )
 const app = express()
 app.use(bodyParser.json())
 app.use(i18n.init)
