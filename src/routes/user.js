@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     )
     .catch(
       (error) => {
-        res.json('An error occured while retrieving users.')
+        res.__('can\'t get users')
         console.error(error)
       }
     )
