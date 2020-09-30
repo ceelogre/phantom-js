@@ -1,5 +1,11 @@
 {
-    "welcome": "App configured properly.",
-    "404": "Dead end, please go back",
-    "can't get users": " An error occured while retrieving users."
+	"404": "Dead end, please go back",
+	"500": "Server error",
+	"welcome": "App configured properly.",
+	"users_not_retrieved": " An error occured while retrieving users.",
+	"users_not_saved": "Unable to save users",
+	"user_not_updated": "User not updated",
+	"user_not_retrieved": "User not retrieved",
+	"404_fx": "function not executed",
+    "user_update_sucessful": "User info updated successfully"
 }

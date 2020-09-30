@@ -1,10 +1,16 @@
 env:
   global:
     - CC_TEST_REPORTER_ID=3a7565bbcad5309993dddc7cbbf2bde427912d8aa46dbd064e3c592203fea4ba
+    - NODE_ENV=test
+    - DB_TEST=postgres://alien@localhost/phantom_test
 language: node_js
 node_js:
   - "node"
+services:
+  - postgresql
 before_script:
+  - psql -c 'CREATE USER alien'
+  - psql -c 'create database phantom_test;' -U postgres
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build

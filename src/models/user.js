@@ -1,5 +1,6 @@
-import { Sequelize, DataTypes } from 'sequelize'
-const sequelize = new Sequelize('postgres://alien@localhost/phantom_development')
+import pkg from 'sequelize'
+const { DataTypes } = pkg
+import sequelize from '../connection.js'
 
 const userRoles = {
   NORMAL: 'normal',

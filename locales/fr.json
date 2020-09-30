@@ -1,5 +1,12 @@
 {
     "welcome": "L'appli est bien configurée",
     "404": "Introuvable",
-    "can't get users": "Un erreur s'est produit en obtenant les utilisateurs"
+    "users_not_retrieved": "Un erreur s'est produit en obtenant les utilisateurs",
+    "users_not_saved": "Les utilisaterus n'ont pa pus enregistrés",
+    "user_not_updated": "Données ne sont pas mise à jour",
+    "user_not_retrieved": "Utilisateur introuvable",
+    "404_fx": "Fonction non-executée",
+    "500": "Erreur de serveur",
+    "404_user": "Utilisateur introuvable",
+    "user_update_sucessful": "le profil d'utilisateur a été bien mise-à-jour"
 }

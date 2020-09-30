@@ -1,5 +1,12 @@
 {
     "welcome": "Application irateguye",
     "404": "Nta nzira ihari, subira inyuma",
-    "can't get users": "Habaye ikibazo mu kuzana urutonde rw'abakoresha application"
+    "users_not_retrieved": "Habaye ikibazo mu kuzana urutonde rw'abakoresha application",
+    "users_not_saved": "Ntago umuntu abashije kubikwa neza",
+    "user_not_updated": "Ntago umwirondoro uhinduwe",
+    "user_not_retrieved": "Umwirondor ntubonetse",
+    "404_fx": "Function ntago ibaye executed",
+    "500": "Habaye ikibazo kuri seriveri",
+    "404_user": "Ukoresha application ntabonetse",
+    "user_update_sucessful": "Umwirondoro wahinduwe neza"
 }
