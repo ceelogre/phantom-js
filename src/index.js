@@ -1,22 +1,11 @@
 import express from 'express'
-import 'dotenv/config'
-import bodyParser from 'body-parser'
-import { I18n } from 'i18n'
-import path from 'path'
-
-import './connection'
-import userRouter from './routes/user'
+import 'dotenv/config.js'
+import i18n from './utils/i18n.js'
+import userRouter from './routes/user.js'
 
 
-const i18n = new I18n({
-  locales: ['en', 'rw', 'fr'],
-  directory: path.join(__dirname, '..', 'locales/')
-})
-
-console.log( path.join(__dirname, 'locales') )
-console.log( path.join(__dirname, '..', 'locales') )
 const app = express()
-app.use(bodyParser.json())
+app.use(express.json())
 app.use(i18n.init)
 
 app.get('/', (req, res) => {
@@ -26,12 +15,26 @@ app.get('/', (req, res) => {
 })
 app.use('/users', userRouter)
 
-app.use(
+app.use( '*',
   (req, res) => {
     let message = res.__('404')
     res.json({ message })
   }
 )
+
+app.use(
+  (err, req, res) => {
+    if (err) console.error(err)
+    res.status(500).send('Internal server error...')
+  }
+)
+
 let PORT = process.env.PORT
 
-app.listen(PORT, () => console.info(`Running on port ${PORT}`))
+let serverInstance =  app.listen(PORT, () => console.info(`Running on port ${PORT}`))
+
+//Clean exit on crashes
+process.on('uncaughtException', () => {
+  serverInstance.close()
+})
+export default app
