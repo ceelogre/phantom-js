@@ -2,6 +2,9 @@ import chai from 'chai'
 import chaiHttp from 'chai-http'
 import app from '../../index.js'
 import assert from 'assert'
+import pkg from 'mocha'
+
+const {before, describe, it} = pkg
 
 chai.use(chaiHttp)
 const expectedObj =  {
@@ -13,7 +16,7 @@ before(() => {
     .type('json')
     .send(expectedObj)
     .then (
-      console.info('New user created' )
+      res => console.info('New user created', res.body)
     )
     .catch(
       error => {
@@ -37,7 +40,7 @@ describe('Get all users suite', () => {
       .get('/users')
       .then(
         res => {
-          assert.deepStrictEqual(res.body[0].username, expectedObj.username, 'Object not found in the body.')
+          assert.deepStrictEqual(res.body[0].username, expectedObj.username, 'Expected object not found in the body.')
         }
       )
   })

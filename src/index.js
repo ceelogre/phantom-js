@@ -2,6 +2,7 @@ import express from 'express'
 import 'dotenv/config.js'
 import i18n from './utils/i18n.js'
 import userRouter from './routes/user.js'
+import './utils/sudo.js'
 
 
 const app = express()

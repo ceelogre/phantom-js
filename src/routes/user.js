@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const user = req.body
-  userController.createUSer(user)
+  userController.createUser(user)
     .then(
       (results) => {
         res.json(results)
