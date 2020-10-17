@@ -4,9 +4,21 @@
     "users_not_retrieved": "Habaye ikibazo mu kuzana urutonde rw'abakoresha application",
     "users_not_saved": "Ntago umuntu abashije kubikwa neza",
     "user_not_updated": "Ntago umwirondoro uhinduwe",
-    "user_not_retrieved": "Umwirondor ntubonetse",
+    "user_not_retrieved": "Umwirondoro ntubonetse",
+    "user_not_deleted": "Umuntu ntiyakuwemo neza",
     "404_fx": "Function ntago ibaye executed",
     "500": "Habaye ikibazo kuri seriveri",
     "404_user": "Ukoresha application ntabonetse",
-    "user_update_sucessful": "Umwirondoro wahinduwe neza"
+    "user_update_successful": "Umwirondoro wahinduwe neza",
+	"roles_not_retrieved": "Urutonde rwa role ntago rubonetse",
+    "role_not_saved": "Role ntago yabitswe neza",
+	"role_update_sucessful": "Role yahinduwe neza",
+    "role_not_updated": "Role ntago yahinduwe neza",
+    "role_404": "Role ntago iri mu bubiko",
+    "role_not_deleted": "Role ntago yakuwemo neza",
+	"role_deleted": "Role yakuwemo neza",
+	"unauth": "Ntiwemerewe gukora iki gikorwa",
+    "no_auth": "ukeneye token gukora iki gikorwa",
+    "token_expired": "token yara rangiye.",
+    "token_malformed": "token ntago yanditse neza"
 }
