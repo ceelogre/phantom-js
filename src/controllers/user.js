@@ -1,6 +1,6 @@
 import { userModel } from '../models/user.js'
 
-const createUSer = (newUser) => {
+const createUser = (newUser) => {
   let saveUserPromise = new Promise((resolve) => {
     resolve(userModel.create(newUser))
   })
@@ -39,4 +39,4 @@ const deleteUser = (id) => {
   return deleteUserPromise
 }
 
-export { createUSer, getUsers, getUser, updateUser, deleteUser}
+export { createUser, getUsers, getUser, updateUser, deleteUser}
