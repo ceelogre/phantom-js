@@ -7,8 +7,8 @@
   "scripts": {
     "start": "node ./src/",
     "dev": "nodemon node src/index.js",
-    "debug": "node --inspect-brk=9229 src/index.js",
-    "test": "npm run migrate:setup &&NODE_ENV=test nyc mocha",
+    "debug": "node --inspect src/index.js",
+    "test": "npm run migrate:setup && NODE_ENV=test nyc mocha",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:setup": "NODE_ENV=test npm run migrate:reset &&NODE_ENV=test npm run migrate"
@@ -21,13 +21,13 @@
   "nyc": {
     "reporter": [
       "text-summary",
-      "text",
-      "lcov"
+      "text"
     ],
     "all": "true",
     "exclude": [
       "coverage",
-      "migrations"
+      "migrations",
+      "src/tests"
     ]
   },
   "repository": {
@@ -59,6 +59,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "i18n": "^0.13.2",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^8.4.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5"

@@ -6,6 +6,18 @@
 	"users_not_saved": "Unable to save users",
 	"user_not_updated": "User not updated",
 	"user_not_retrieved": "User not retrieved",
+	"user_not_deleted": "User not deleted",
 	"404_fx": "function not executed",
-    "user_update_sucessful": "User info updated successfully"
+	"user_update_sucessful": "User info updated successfully",
+	"roles_not_retrieved": "Unable to retrieve roles",
+	"role_not_saved": "Unable to save role",
+	"role_update_successful": "Role has been successfully updated",
+	"role_not_updated": "Role not updated successfully",
+	"role_not_deleted": "Unable to delete role",
+	"role_deleted": "Role has been deleted successfully",
+	"role_404": "Role not found",
+	"unauth": "Unauthorized",
+	"no_auth": "Requires authorization token",
+	"token_expired": "Token has expired",
+	"token_malformed": "Token malformed"
 }

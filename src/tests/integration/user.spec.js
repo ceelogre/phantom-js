@@ -15,9 +15,7 @@ before(() => {
     .post('/users')
     .type('json')
     .send(expectedObj)
-    .then (
-      res => console.info('New user created', res.body)
-    )
+    .then ()
     .catch(
       error => {
         console.error('User not created ', error)
