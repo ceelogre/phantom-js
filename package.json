@@ -27,7 +27,9 @@
     "all": "true",
     "exclude": [
       "coverage",
-      "migrations"
+      "migrations",
+      "src/tests",
+      "src/utils"
     ]
   },
   "repository": {
