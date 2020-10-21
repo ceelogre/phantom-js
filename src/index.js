@@ -2,6 +2,8 @@ import express from 'express'
 import 'dotenv/config.js'
 import i18n from './utils/i18n.js'
 import userRouter from './routes/user.js'
+import roleRouter from './routes/role.js'
+import whoami from './utils/whoami.js'
 import './utils/sudo.js'
 
 
@@ -15,6 +17,7 @@ app.get('/', (req, res) => {
   })
 })
 app.use('/users', userRouter)
+app.use('/roles', whoami, roleRouter)
 
 app.use( '*',
   (req, res) => {
