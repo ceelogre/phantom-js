@@ -1,9 +1,10 @@
 import pkg from 'sequelize'
 const { DataTypes } = pkg
 import sequelize from '../connection.js'
+import { RolesModel } from './role.js'
 
 const userRoles = {
-  NORMAL: 'normal',
+  NORMAL: 'passengers',
   DRIVER: 'driver',
   OPERATOR: 'operator',
   SUPER: 'admin'
@@ -14,9 +15,8 @@ const User = sequelize.define('User', {
     allowNull: false,
     unique: true
   },
-  role: {
-    type: DataTypes.STRING,
-    defaultValue: userRoles.NORMAL
+  RoleId: {
+    type: DataTypes.NUMBER
   },
   password: {
     type: DataTypes.STRING
@@ -24,4 +24,5 @@ const User = sequelize.define('User', {
   }
 })
 
+User.belongsTo(RolesModel)
 export {User as userModel }

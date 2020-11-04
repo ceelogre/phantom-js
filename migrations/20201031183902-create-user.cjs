@@ -1,11 +1,4 @@
 'use strict';
-const userRoles = {
-  NORMAL: 'normal',
-  DRIVER: 'driver',
-  OPERATOR: 'operator',
-  SUPER: 'admin'
-}
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Users', {
@@ -15,17 +8,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      password: {
+      username: {
         type: Sequelize.STRING
       },
-      username: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true
+      RoleId: {
+        type: Sequelize.INTEGER
       },
-      role: {
-        type: Sequelize.STRING,
-        defaultValue: userRoles.NORMAL
+      password: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
