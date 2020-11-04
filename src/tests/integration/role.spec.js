@@ -27,7 +27,7 @@ before(() => {
       }
     )
 })
-describe('Create roles test suite', () => {
+describe('Create roles integration test suite', () => {
   it('should not allow a request without token', () => {
     return chai.request(app)
       .post('/roles')
@@ -62,6 +62,7 @@ describe('Create roles test suite', () => {
         message: 'Unable to save role'
       })
     ])
+      .then(res => console.info(res))
   })
   it('should save a role with name and type properites', () => {
     expectedRole.name = 'operator'

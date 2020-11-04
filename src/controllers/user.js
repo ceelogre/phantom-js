@@ -34,7 +34,9 @@ const updateUser = (id, user) => {
 
 const deleteUser = (id) => {
   let deleteUserPromise = new Promise( (resolve) => {
-    resolve(userModel.destroy(id))
+    resolve(userModel.destroy({
+      where: {id}
+    }))
   })
   return deleteUserPromise
 }
