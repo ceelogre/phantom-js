@@ -1,21 +1,21 @@
-import { RolesModel } from '../models/role.js'
+import { RoleModel } from '../models/role.js'
 
 const createRole = (newRole) => {
   let saveRolePromise = new Promise((resolve) => {
-    resolve(RolesModel.create(newRole))
+    resolve(RoleModel.create(newRole))
   })
   return saveRolePromise
 }
 
 const getRoles = () => {
   let getRolesPromise = new Promise((resolve) => {
-    resolve(RolesModel.findAll())
+    resolve(RoleModel.findAll())
   })
   return getRolesPromise
 }
 
 const getRole = (id) => {
-  return new Promise((resolve) => resolve(RolesModel.findAll({
+  return new Promise((resolve) => resolve(RoleModel.findAll({
     where: {
       id
     }
@@ -23,7 +23,7 @@ const getRole = (id) => {
 }
 const updateRole = (id, role) => {
   let updateRolePromise = new Promise((resolve) => {
-    resolve(RolesModel.update(role, {
+    resolve(RoleModel.update(role, {
       where: { id }
     })) 
   })
@@ -32,7 +32,7 @@ const updateRole = (id, role) => {
 
 const deleteRole = (id) => {
   let deleteRolePromise = new Promise( (resolve) => {
-    resolve(RolesModel.destroy({
+    resolve(RoleModel.destroy({
       where: {id}
     }))
   })
