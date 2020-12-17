@@ -2,7 +2,12 @@ import pkg from 'sequelize'
 const { DataTypes } = pkg
 import sequelize from '../connection.js'
 
-
+const possibleRoles = {
+  BASIC: 'passenger',
+  STANDARD: 'driver',
+  MANAGER: 'operator',
+  SUPER: 'admin'
+}
 
 const Role = sequelize.define('Role', {
   name: {
@@ -15,4 +20,4 @@ const Role = sequelize.define('Role', {
   }
 })
 
-export {Role as RolesModel}
+export {possibleRoles, Role as RoleModel}
