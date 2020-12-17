@@ -12,7 +12,7 @@ const {before, it, describe} = pkg
 
 const expectedRole =  {
   name: 'driver',
-  type: 'normal'
+  type: '1'
 }
 before(() => {
   return chai.request(app)
