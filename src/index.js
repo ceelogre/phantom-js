@@ -1,5 +1,5 @@
 import express from 'express'
-import 'dotenv/config.js'
+import 'dotenv/config'
 import i18n from './utils/i18n.js'
 import userRouter from './routes/user.js'
 import roleRouter from './routes/role.js'
