@@ -9,13 +9,14 @@ const {before, describe, it} = pkg
 chai.use(chaiHttp)
 const expectedObj =  {
   username: 'PnL',
+  role: 'driver'
 }
 before(() => {
   return chai.request(app)
     .post('/users')
     .type('json')
     .send(expectedObj)
-    .then ()
+    .then (res =>  console.info('Yes', res.body))
     .catch(
       error => {
         console.error('User not created ', error)

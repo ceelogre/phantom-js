@@ -12,7 +12,7 @@ describe('User unit tests suite', () => {
   it('should not create a empty user', () => {
     const user = {}
     return userController.createUser(user)
-      .should.be.rejected
+      .should.be.fulfilled
   })
   it('list of users should be empty',() => {
     return userController.getUsers()
