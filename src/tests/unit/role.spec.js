@@ -35,7 +35,7 @@ describe('Role unit tests suite', () => {
 
 describe('GET role helper ', () => {
   it ('should return BASIC given passenger role', () => {
-    return returnRoleEnum('Passenger').should.eq('BASIC')
+    return returnRoleEnum('passenger').should.eq('BASIC')
   })
   it('should return STANDARD given role driver', () => {
     return returnRoleEnum('driver').should.eq('STANDARD')
