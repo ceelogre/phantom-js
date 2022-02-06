@@ -6,12 +6,24 @@ import roleRouter from './routes/role.js'
 import whoami from './utils/whoami.js'
 import './utils/sudo.js'
 import config from './utils/config.js'
-
+import swaggerUi from 'swagger-ui-express'
+import openAPISpec from './swagger.js'
 
 const app = express()
 app.use(express.json())
 app.use(i18n.init)
 
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openAPISpec))
+
+/** 
+ * @openapi
+ * /:
+ *  get:
+ *     description: Welcome to Phantom API
+ *     responses:
+ *       200:
+ *         description: Returns sth I don't understand
+*/
 app.get('/', (req, res) => {
   res.json({
     message: res.__('welcome')
