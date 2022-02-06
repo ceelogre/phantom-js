@@ -3,6 +3,21 @@ const router = express.Router()
 import * as roleController from '../controllers/role.js'
 import logger from '../utils/logger.js'
 
+/** 
+  * @openapi
+  * /roles:
+  *  get:
+  *     tags: 
+  *        - Roles
+  *     description: Get all roles 
+  *     parameters:
+  *        - name: sudo
+  *          in: header
+  *          description: Bearer token
+ *     responses:
+ *       200:
+ *         description: Returns a list of roles
+ */ 
 router.get('/', (req, res) => {
   roleController.getRoles()
     .then(

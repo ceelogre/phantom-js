@@ -2,6 +2,17 @@ import express from 'express'
 const router = express.Router()
 import * as userController from '../controllers/user.js'
 
+/** 
+ * @openapi
+ * /users:
+ *  get:
+ *     description: Get all users 
+ *     tags:
+ *        - Users
+ *     responses:
+ *       200:
+ *         description: Returns a list of users
+*/
 router.get('/', (req, res) => {
   userController.getUsers()
     .then(
